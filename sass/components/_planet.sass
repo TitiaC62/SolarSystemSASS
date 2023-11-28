@@ -1,0 +1,22 @@
+
+  @use "../abstracts/_all.sass" as abstracts
+
+
+.planet
+        @include abstracts.circle(150px)
+
+        &--mercury
+            @include abstracts.circle(abstracts.$mercury-size, orange)
+            
+        &--venus
+            @include abstracts.circle(abstracts.$venus-size, purple)  
+
+        &--earth
+            @include abstracts.circle(abstracts.$earth-size, blue)
+            position: relative
+        
+        &--mars
+            @include abstracts.circle(abstracts.$earth-size, red)
+            position: relative
+        
+

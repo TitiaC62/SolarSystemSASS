@@ -1,0 +1,23 @@
+.satellite
+    background-color: red
+    width: 15px
+    height: 15px
+    border-radius: 100%
+    position: absolute
+    top: 0
+    left: 50%
+    translate: -50% -50%
+   
+
+    &--moon
+        @extend .satellite
+        background-color:  grey
+
+    &--phobos
+        @extend .satellite
+        background-color: white
+    
+    &--deimos
+        @extend .satellite
+        background-color: orange
+        
