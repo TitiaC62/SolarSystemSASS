@@ -1,4 +1,4 @@
-@use "./_variables" as var
+@use "./_variables" as abstracts
 @use 'sass:math'
     
 @mixin circle($diameter, $color: pink)
@@ -8,8 +8,14 @@
     background-color: $color
     flex-shrink: 0
 
-@mixin rotate-around-planet($planet-size, $duration : 5s)
-    $center-x: math.div(var.$satellite-size, 2)
-    $center-y: math.div(var.$satellite-size, 2) + math.div($planet-size, 2)
+@mixin rotate-around-planet($planet-size, $duration: 15s)
+    $center-x: math.div(abstracts.$satellite-size, 2)
+    $center-y: math.div(abstracts.$satellite-size, 2) + math.div($planet-size, 2)
     transform-origin: $center-x $center-y
-    animation:  animation-rotate 5s linear infinite
+    animation:  animation-rotate $duration linear infinite
+
+@mixin rotate-around-sun($distance-to-sun, $planet-size, $duration: 10s)
+    $center-x: ($distance-to-sun + math.div(abstracts.$sun-size, 2)) * -1
+    $center-y: math.div($planet-size, 2)
+    transform-origin: $center-x $center-y
+    animation:  animation-rotate $duration linear infinite
