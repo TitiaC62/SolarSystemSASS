@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+@keyframes animation-rotate {
+  0% {
+    transform: rotate();
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .galaxy {
   background-color: black;
   display: flex;
@@ -15,22 +23,29 @@
 
 .satellite, .satellite--deimos, .satellite--phobos, .satellite--moon {
   background-color: red;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 100%;
   position: absolute;
   top: 0;
   left: 50%;
   translate: -50% -50%;
+  color: white;
 }
 .satellite--moon {
   background-color: grey;
+  transform-origin: 8px 58px;
+  animation: animation-rotate 5s linear infinite;
 }
 .satellite--phobos {
   background-color: white;
+  transform-origin: 8px 34.3157894737px;
+  animation: animation-rotate 5s linear infinite;
 }
 .satellite--deimos {
   background-color: orange;
+  transform-origin: 8px 34.3157894737px;
+  animation: animation-rotate 5s linear infinite;
 }
 
 .planet {
@@ -64,8 +79,8 @@
 }
 .planet--mars {
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  width: 52.6315789474px;
+  height: 52.6315789474px;
   background-color: red;
   flex-shrink: 0;
   position: relative;
