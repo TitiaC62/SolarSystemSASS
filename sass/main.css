@@ -18,7 +18,7 @@
   align-items: center;
   height: 100vh;
   gap: 20px;
-  margin-left: calc(50vw - 100px);
+  margin-left: calc(50vw - 160px);
 }
 
 .satellite, .satellite--deimos, .satellite--phobos, .satellite--moon {
@@ -34,17 +34,17 @@
 }
 .satellite--moon {
   background-color: grey;
-  transform-origin: 8px 58px;
+  transform-origin: 8px 48px;
   animation: animation-rotate 15s linear infinite;
 }
 .satellite--phobos {
   background-color: white;
-  transform-origin: 8px 34.3157894737px;
+  transform-origin: 8px 29.0526315789px;
   animation: animation-rotate 6s linear infinite;
 }
 .satellite--deimos {
   background-color: orange;
-  transform-origin: 8px 34.3157894737px;
+  transform-origin: 8px 29.0526315789px;
   animation: animation-rotate 15s linear infinite;
 }
 
@@ -52,50 +52,78 @@
   border-radius: 100%;
   width: 150px;
   height: 150px;
-  background-color: pink;
   flex-shrink: 0;
 }
 .planet--mercury {
   border-radius: 100%;
-  width: 38.4615384615px;
-  height: 38.4615384615px;
-  background-color: orange;
+  width: 30.7692307692px;
+  height: 30.7692307692px;
   flex-shrink: 0;
-  transform-origin: -120px 19.2307692308px;
+  transform-origin: -180px 15.3846153846px;
   animation: animation-rotate 10s linear infinite;
 }
 .planet--venus {
   border-radius: 100%;
-  width: 90.9090909091px;
-  height: 90.9090909091px;
-  background-color: purple;
+  width: 76.1904761905px;
+  height: 76.1904761905px;
   flex-shrink: 0;
-  transform-origin: -178.4615384615px 45.4545454545px;
-  animation: animation-rotate 15s linear infinite;
+  transform-origin: -230.7692307692px 38.0952380952px;
+  animation: animation-rotate 11s linear infinite;
 }
 .planet--earth {
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+  width: 80px;
+  height: 80px;
   flex-shrink: 0;
   position: relative;
-  transform-origin: -289.3706293706px 50px;
-  animation: animation-rotate 35s linear infinite;
+  transform-origin: -326.9597069597px 40px;
+  animation: animation-rotate 12s linear infinite;
 }
 .planet--mars {
   border-radius: 100%;
-  width: 52.6315789474px;
-  height: 52.6315789474px;
-  background-color: red;
+  width: 42.1052631579px;
+  height: 42.1052631579px;
   flex-shrink: 0;
   position: relative;
+  transform-origin: -426.9597069597px 21.0526315789px;
+  animation: animation-rotate 13s linear infinite;
+}
+.planet--jupiter {
+  border-radius: 100%;
+  width: 256px;
+  height: 256px;
+  flex-shrink: 0;
+  transform-origin: -489.0649701176px 128px;
+  animation: animation-rotate 14s linear infinite;
+}
+.planet--saturne {
+  border-radius: 100%;
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+  transform-origin: -765.0649701176px 120px;
+  animation: animation-rotate 15s linear infinite;
+}
+.planet--neptune {
+  border-radius: 100%;
+  width: 224px;
+  height: 224px;
+  flex-shrink: 0;
+  transform-origin: -1025.0649701176px 112px;
+  animation: animation-rotate 16s linear infinite;
+}
+.planet--uranus {
+  border-radius: 100%;
+  width: 232px;
+  height: 232px;
+  flex-shrink: 0;
+  transform-origin: -1277.0649701176px 116px;
+  animation: animation-rotate 17s linear infinite;
 }
 
 .sun {
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
-  background-color: yellow;
+  width: 320px;
+  height: 320px;
   flex-shrink: 0;
 }/*# sourceMappingURL=main.css.map */
