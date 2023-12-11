@@ -1,6 +1,5 @@
 @use "../abstracts/_all" as abstracts
-    
+
 .sun
-    @include abstracts.circle(abstracts.$sun-size)
-        
-   
+    $background: "../images/sun.svg"
+    @include abstracts.circle(abstracts.$sun-size, $background)
