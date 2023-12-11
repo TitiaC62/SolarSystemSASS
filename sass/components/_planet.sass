@@ -4,18 +4,19 @@
 
 
 $list-planets: 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'
-$planets-size:  ("mercury": #{abstracts.$mercury-size}, "venus": #{abstracts.$venus-size}, "earth": #{abstracts.$earth-size}, "mars": #{abstracts.$mars-size},"jupiter": #{abstracts.$jupiter-size}, "saturn": #{abstracts.$saturn-size}, "urnanus": #{abstracts.$uranus-size}, "neptune": #{abstracts.$neptune-size})
+$planets-size:  ("mercury": #{abstracts.$mercury-size}, "venus": #{abstracts.$venus-size}, "earth": #{abstracts.$earth-size}, "mars": #{abstracts.$mars-size},"jupiter": #{abstracts.$jupiter-size}, "saturn": #{abstracts.$saturn-size}, "uranus": #{abstracts.$uranus-size}, "neptune": #{abstracts.$neptune-size})
 
 
 
 .planet
-    @include abstracts.circle(150px)
 
     @each $planet in $list-planets
         &--#{$planet}
             $background-planet:"../images/#{$planet}.svg"
             $size-planet: map.get($planets-size, $planet)
             @include abstracts.circle($size-planet, $background-planet )
+            @if $planet == 'uranus' or $planet == 'saturn'
+                border-radius: 0
 
     &--mercury
         $distance-between-mercury-and-sun: abstracts.$gap-between-planets
